@@ -161,14 +161,9 @@ class mrtzcmp3 {
 		}
 
 		if($download_status !== true) {
-			exec('echo "'.date("d.m.Y H:m:s").var_export($download_status,1)."\n\n".'" >> /home/xyco/Arbeitsfläche/spotify/temp/stop.txt');
+			exec('echo "'.date("d.m.Y H:m:s").var_export($download_status,1)."\n\n".'" >> '.workfolder.stop_file);
 			die("Download fehlgeschlagen: DL-Limit erreicht");
 		}
-		
-		if(dev == 1){
-			die("DEV: ".var_export($track,1).var_export($download_status,1).use_stream_dl);
-		}
-		
 		return $download_status;
 		
 	}

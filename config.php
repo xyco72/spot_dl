@@ -13,6 +13,8 @@ define('workfolder','__DIR__');
 define('download_folder',__DIR__.'Downloads');
 define('playlist_muscic_location','/home/xyco/Musik/');
 define('stop_file','/temp/stop.txt');
+define('curl_cookie',"temp/curl_cookie");
+define('curl_referer',"Mozilla/5.0 (Windows; U; Windows NT 6.0; de; rv:1.9.0.9) Gecko/2009040821 Firefox/3.0.9 (.NET CLR 3.5.30729)");
 
 include 'class.spotify.php';
 include 'class.mrtzcmp3.php';

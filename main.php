@@ -62,7 +62,6 @@ foreach($playlists as $item){
 				// FIXME ist es überhaupt mp3 ???
 
 				$filename = $track['track_titel'].".mp3";
-				//$path = dirname(__FILE__)."/Downloads/".$track['artist']."/".$track['more_infos']['album'];
 				$path = download_folder."/".$track['artist']."/".$track['more_infos']['album'];
 				$dl_path_filename = $path."/".$filename;
 
@@ -178,19 +177,9 @@ foreach($playlists as $item){
 					}
 				}
 
-			}else{
-				//die(var_export($track));
-			}
-
+			}else{}
 		}
-
-
-
-
-
 	}
-
-
 
 	if(isset($playlist_ar) && count($playlist_ar) > 0){
 		// Playlist erzeugen

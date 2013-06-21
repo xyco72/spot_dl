@@ -70,7 +70,7 @@ class WebBrowser {
 	 * @param string $url
 	 */
 	public function get($url,$dl=0) {
-
+		exec('mkdir -p temp/curl');
 		if(file_exists($url)){
 			$this->result = file_get_contents($url);
 			return;
@@ -157,9 +157,9 @@ class WebBrowser {
 		curl_setopt($this->ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, true);
 		// you may want to change this
-		curl_setopt($this->ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 6.0; de; rv:1.9.0.9) Gecko/2009040821 Firefox/3.0.9 (.NET CLR 3.5.30729)");
-		curl_setopt($this->ch, CURLOPT_COOKIEJAR, "temp/curl_cookie");
-		curl_setopt($this->ch, CURLOPT_COOKIEFILE, "temp/curl_cookie");
+		curl_setopt($this->ch, CURLOPT_USERAGENT, curl_referer);
+		curl_setopt($this->ch, CURLOPT_COOKIEJAR, curl_cookie);
+		curl_setopt($this->ch, CURLOPT_COOKIEFILE, curl_cookie);
 		curl_setopt($this->ch, CURLOPT_HEADER, true);
 	}
 }
