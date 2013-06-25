@@ -10,7 +10,7 @@ define('rewrite_id3','1');
 define('use_subprogress','0');
 define('use_stream_dl','0');
 define('workfolder','__DIR__');
-define('download_folder',__DIR__.'Downloads');
+define('download_folder',__DIR__.'/Downloads');
 define('playlist_muscic_location','/home/xyco/Musik/');
 define('stop_file','/temp/stop.txt');
 define('curl_cookie',"temp/curl_cookie");
@@ -30,3 +30,5 @@ $max_progress = 20;
 
 // vll unnötig
 $stop_file = '/home/xyco/Arbeitsfläche/spotify/temp/stop.txt';
+
+// test
